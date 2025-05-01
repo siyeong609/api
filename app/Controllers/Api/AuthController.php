@@ -17,4 +17,15 @@ class AuthController extends BaseController
         $status = $result['success'] ? 200 : 400;
         return $this->response->setStatusCode($status)->setJSON($result);
     }
+
+    public function login()
+    {
+        $data = $this->request->getJSON(true);
+
+        $service = new UserService();
+        $result = $service->login($data);
+
+        $status = $result['success'] ? 200 : 401;
+        return $this->response->setStatusCode($status)->setJSON($result);
+    }
 }

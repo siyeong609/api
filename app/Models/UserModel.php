@@ -10,6 +10,6 @@ class UserModel extends Model
     protected $primaryKey = 'id';
     protected $allowedFields = [
         'name', 'userid', 'password', 'email', 'phone',
-        'provider', 'provider_id', 'status'
+        'provider', 'provider_id', 'status', 'reset_token'
     ];
 }

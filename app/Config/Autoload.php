@@ -77,7 +77,9 @@ class Autoload extends AutoloadConfig
      *
      * @var list<string>
      */
-    public $files = [];
+    public $files = [
+        APPPATH . 'Config/DotenvLoader.php',  // dotenv를 자동으로 로드할 파일 추가
+    ];
 
     /**
      * -------------------------------------------------------------------
